@@ -34,6 +34,7 @@ Tag.belongsToMany(Product, {
   }
 });
 
+//exporting all models/files
 module.exports = {
   Product,
   Category,

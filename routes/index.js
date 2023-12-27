@@ -1,6 +1,8 @@
+//importing packagees and apiRoutes
 const router = require('express').Router();
 const apiRoutes = require('./api');
 
+//building route to apis
 router.use('/api', apiRoutes);
 
 router.use((req, res) => {
