@@ -125,7 +125,8 @@ You will also be able to use your POST, PUT, and DELETE routes to create, update
 <img width="75%" alt="PUT route successfully UPDATING ONE product by ID" src="./images/PUT-byID.png">
 
 #### DELETE:
-<img width="75%" alt="DELETE route successfully DELETING ONE product by ID" src="./imageS/DELETE-byID.png">
+
+<img width="75%" alt="DELETE route successfully DELETING ONE product by ID" src="./images/DELETE-byID.png">
 
 ### Test Sample
 
