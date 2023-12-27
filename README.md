@@ -32,105 +32,55 @@ Use the `schema.sql` file in the `db` folder to create your database with MySQL 
 Your database should contain the following four models, including the requirements listed for each model:
 
 * `Category`
-
   * `id`
-
-    * Integer.
-  
-    * Doesn't allow null values.
-  
-    * Set as primary key.
-  
+    * Integer.  
+    * Doesn't allow null values.  
+    * Set as primary key.  
     * Uses auto increment.
-
-  * `category_name`
-  
-    * String.
-  
+  * `category_name`  
+    * String.  
     * Doesn't allow null values.
-
 * `Product`
-
-  * `id`
-  
-    * Integer.
-  
-    * Doesn't allow null values.
-  
-    * Set as primary key.
-  
+  * `id`  
+    * Integer.  
+    * Doesn't allow null values.  
+    * Set as primary key.  
     * Uses auto increment.
-
-  * `product_name`
-  
-    * String.
-  
+  * `product_name`  
+    * String.  
     * Doesn't allow null values.
-
-  * `price`
-  
-    * Decimal.
-  
-    * Doesn't allow null values.
-  
+  * `price`  
+    * Decimal.  
+    * Doesn't allow null values.  
     * Validates that the value is a decimal.
-
-  * `stock`
-  
-    * Integer.
-  
-    * Doesn't allow null values.
-  
-    * Set a default value of `10`.
-  
+  * `stock`  
+    * Integer.  
+    * Doesn't allow null values.  
+    * Set a default value of `10`.  
     * Validates that the value is numeric.
-
-  * `category_id`
-  
-    * Integer.
-  
+  * `category_id`  
+    * Integer.  
     * References the `Category` model's `id`.
-
 * `Tag`
-
-  * `id`
-  
-    * Integer.
-  
-    * Doesn't allow null values.
-  
-    * Set as primary key.
-  
+  * `id`  
+    * Integer.  
+    * Doesn't allow null values.  
+    * Set as primary key.  
     * Uses auto increment.
-
-  * `tag_name`
-  
+  * `tag_name`  
     * String.
-
 * `ProductTag`
-
   * `id`
-
     * Integer.
-
     * Doesn't allow null values.
-
     * Set as primary key.
-
     * Uses auto increment.
-
   * `product_id`
-
     * Integer.
-
     * References the `Product` model's `id`.
-
   * `tag_id`
-
     * Integer.
-
     * References the `Tag` model's `id`.
-
 #### Associations
 
 You'll need to execute association methods on your Sequelize models to create the following relationships between them:
@@ -139,13 +89,7 @@ You'll need to execute association methods on your Sequelize models to create th
 
 * `Product` belongs to many `Tag` models, and `Tag` belongs to many `Product` models. Allow products to have multiple tags and tags to have many products by using the `ProductTag` through model.
 
-> **Hint:** Make sure you set up foreign key relationships that match the column we created in the respective models.
-
-#### Fill Out the API Routes to Perform RESTful CRUD Operations
-
-Fill out the unfinished routes in `product-routes.js`, `tag-routes.js`, and `category-routes.js` to perform create, read, update, and delete operations using your Sequelize models.
-
-Note that the functionality for creating the many-to-many relationship for products has already been completed for you.
+> **Hint:** Make sure you set up foreign key relationships that match the column created in the respective models.
 
 #### Seed the Database
 
@@ -153,13 +97,51 @@ After creating the models and routes, run `npm run seed` to seed data to your da
 
 #### Sync Sequelize to the Database on Server Start
 
-Create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start.
+You will also want your `server.js` to sync the Sequelize models to the MySQL database on server start.
 
 ## Usage
 
+Once completed, you will be able to control the entire back end of your system and keep track of inventory better.
+
+#### GET ALL:
+
+Your GET routes will return all categories, all products, and all tags when using Insomnia.
+
+<img width="75%" alt="GET route successfully gathering all categories" src="./images/GET-all.png">
+
+#### GET BY ID:
+
+Your GET routes will return a single category, a single product, and a single tag when using Insomnia.
+
+<img width="75%" alt="GET route successfully gathering ONE category by ID" src="./images/GET-byID.png">
+
+
+You will also be able to use your POST, PUT, and DELETE routes to create, update, and delete either categories, products or tags when using Insomnia.
+
+#### POST:
+<img width="75%" alt="POST route successfully CREATING a product" src="./images/POST-route.png">
+
+#### PUT:
+<img width="75%" alt="PUT route successfully UPDATING ONE product by ID" src="./images/PUT-byID.png">
+
+#### DELETE:
+<img width="75%" alt="DELETE route successfully DELETING ONE product by ID" src="./imageS/DELETE-byID.png">
+
 ### Test Sample
 
+
+
 ### Credits
+
+[MySQL2](https://www.npmjs.com/package/mysql2)
+
+[Sequelize](https://www.npmjs.com/package/sequelize)
+
+[Insomnnia](https://insomnia.rest/)
+
+[SMU Bootcamp Activities Module 13](https://techbootcamps.smu.edu/coding/landing-ftpt-b5a/?s=Google-Brand_Tier-1_&dki=Learn%20Coding%20and%20More%20Online&pkw=smu%20coding%20bootcamp&pcrid=454243062435&pmt=e&utm_source=google&utm_medium=cpc&utm_campaign=GGL%7CSMU%7CSEM%7CCODING%7C-%7COFL%7CTIER-1%7CALL%7CBRD%7CEXACT%7CCore%7CBootcamp&utm_term=smu%20coding%20bootcamp&s=google&k=smu%20coding%20bootcamp&utm_adgroupid=104873073054&utm_locationphysicalms=9026987&utm_matchtype=e&utm_network=g&utm_device=c&utm_content=454243062435&utm_placement=&gad_source=1&gclid=CjwKCAiAmZGrBhAnEiwAo9qHiRoAl-bNZ7GAouKuJ0JlnPSvLdiSbMlkquyCHKF7YMPzkpyL2pH2wBoCyb0QAvD_BwE&gclsrc=aw.ds)
+
+[Dotenv](https://www.npmjs.com/package/dotenv)
 
 ### License
 
