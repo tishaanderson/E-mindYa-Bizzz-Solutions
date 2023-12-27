@@ -130,7 +130,14 @@ You will also be able to use your POST, PUT, and DELETE routes to create, update
 
 ### Test Sample
 
+#### GET routes (all && by id):
+[GET-all_byID-routes.webm](https://github.com/tishaanderson/E-mindYa-Bizzz-Solutions/assets/136303804/93674f90-1b5a-4d80-816c-a52e16dc7070)
 
+#### POST routes:
+[POST-routes-video.mp4](https://github.com/tishaanderson/E-mindYa-Bizzz-Solutions/assets/136303804/a6d71d4a-5b2d-49c0-8114-446abc71799b)
+
+#### PUT and DELETE routes:
+[POST-and-DELETE-routes-video.mp4.webm](https://github.com/tishaanderson/E-mindYa-Bizzz-Solutions/assets/136303804/281b5a18-0644-498b-b2a3-182eccef3f3c)
 
 ### Credits
 
